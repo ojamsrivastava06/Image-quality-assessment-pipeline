@@ -38,7 +38,7 @@ The individual measurements are normalized to `[0, 1]` and combined using a weig
 
 ---
 ## 🧠 Decision Pipeline
-
+```text
 Input Fundus Image
         │
         ▼
@@ -73,6 +73,8 @@ Weighted Quality Score
         ├── BORDERLINE
         │       └── Enhancement
         │              └── Reassessment
+ ```
+
 ✨ Borderline Image Enhancement
 
 For borderline images, the system can apply controlled deterministic enhancement operations and then reassess the image using the same quality assessment pipeline.
@@ -111,7 +113,7 @@ NON-CRITICAL images bypass enhancement
 Input dataset files are not modified
 
 📁 Project Structure
-
+ ```text
 .
 ├── src/
 │   ├── config.py
@@ -132,7 +134,7 @@ Input dataset files are not modified
 │
 ├── .gitignore
 └── README.md
-
+ ```
 ⚙️ Requirements
 Python 3.13
 OpenCV
