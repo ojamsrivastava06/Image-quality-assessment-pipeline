@@ -161,8 +161,13 @@ ARTIFACT_GLARE_BLOB_NON_CRITICAL_MAX = 4
 # =====================================================================
 # Strict, configurable safety bounds for post-triage BORDERLINE enhancement.
 # Enhancement is never applied to CRITICAL or NON-CRITICAL images.
+MAX_ENHANCEMENT_ATTEMPTS = 2
+MAX_OPERATIONS_PER_ATTEMPT = 2
+
 ENHANCEMENT_CONFIG = {
-    # General Safety Bounds
+    # General Safety Bounds & Attempt Limits
+    'max_enhancement_attempts': 2,
+    'max_operations_per_attempt': 2,
     'max_operations_per_image': 4,
     'min_retinal_area_for_enhancement': 150000,
     
