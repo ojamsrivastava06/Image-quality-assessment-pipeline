@@ -92,6 +92,7 @@ Only one enhancement cycle is performed.
 
 Severe blur, insufficient FOV, severe clipping, and major capture failures are not assumed to be recoverable through enhancement.
 
+
 🛡️ Safety & Decision Rules
 
 The pipeline follows a strict three-state decision contract:
@@ -135,7 +136,9 @@ Input dataset files are not modified
 ├── .gitignore
 └── README.md
  ```
+
 ⚙️ Requirements
+
 Python 3.13
 OpenCV
 NumPy
@@ -145,19 +148,20 @@ Pillow
 
 Install dependencies as required by the project environment.
 
+
 ▶️ Running Module 1
 
 From the project root:
-
+ ```text
 py -3.13 scripts\smoke_test_module1.py
-
+ ```
 The smoke test runs the complete Module 1 pipeline on a fundus image and reports the quality assessment and final decision.
 
 Test a specific image
+ ```text
 py -3.13 scripts\smoke_test_module1.py "dataset\your_image.png"
-
+ ```
 The script supports a specific image path and reports:
-
 Raw quality metrics
 Normalized quality scores
 Composite score
@@ -168,6 +172,8 @@ Final status
 OK_TO_GO
 RECAPTURE_REQUIRED
 ENHANCEMENT_REQUIRED
+
+
 📊 Full Dataset Evaluation
 
 The complete dataset evaluation was performed separately during development and validation.
@@ -175,12 +181,13 @@ The complete dataset evaluation was performed separately during development and 
 The production evaluation processed 4,178 fundus images.
 
 Final provisional distribution:
-
+ ```text
 NON-CRITICAL: 3,891
 BORDERLINE: 13
 CRITICAL: 274
-
+ ```
 These results are included as development/validation artifacts and should not be interpreted as clinical performance claims.
+
 
 🧪 Verification
 
@@ -198,8 +205,10 @@ Runtime invariants
 Dataset immutability
 
 Example verification result:
-
+ ```text
 MODULE 1 SMOKE TEST: PASS
+ ```
+
 ⚠️ Clinical Disclaimer
 
 This repository represents a research/prototype implementation for the Smart India Hackathon problem statement.
@@ -208,12 +217,13 @@ The quality thresholds, weights, and decision boundaries are provisional and req
 
 The Module 1 output is not a medical diagnosis and should not be used as a standalone clinical decision system.
 
+
 🚀 Future Integration
 
 Module 1 is designed as the image-quality gate before downstream retinal analysis and diabetic retinopathy screening.
 
 The final system can integrate:
-
+ ```text
 Fundus Image
       ↓
 Module 1
@@ -224,6 +234,9 @@ Quality Gate
 Retinal Analysis / DR Screening
       ↓
 Explainable Result
+ ```
+
+
 🏆 Smart India Hackathon 2026
 
 Problem Statement: SIH26038
