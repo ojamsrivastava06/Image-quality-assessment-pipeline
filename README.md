@@ -37,10 +37,8 @@ The pipeline evaluates seven image-quality dimensions:
 The individual measurements are normalized to `[0, 1]` and combined using a weighted quality score.
 
 ---
-
 ## 🧠 Decision Pipeline
 
-```text
 Input Fundus Image
         │
         ▼
@@ -75,8 +73,6 @@ Weighted Quality Score
         ├── BORDERLINE
         │       └── Enhancement
         │              └── Reassessment
-
-
 ✨ Borderline Image Enhancement
 
 For borderline images, the system can apply controlled deterministic enhancement operations and then reassess the image using the same quality assessment pipeline.
@@ -103,7 +99,6 @@ The pipeline follows a strict three-state decision contract:
 | NON-CRITICAL | OK TO GO           |
 | BORDERLINE   | ENHANCE → REASSESS |
 | CRITICAL     | RECAPTURE          |
-
 
 Additional runtime checks verify:
 
@@ -234,6 +229,7 @@ Domain: HealthTech
 Focus: Explainable AI for Diabetic Retinopathy Screening in Rural India
 
 Developed as part of the Smart India Hackathon 2026.
-        │
-        └── CRITICAL
-                └── RECAPTURE
+.
+  
+
+
